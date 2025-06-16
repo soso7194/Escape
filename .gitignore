@@ -1,0 +1,72 @@
+# ========== Unity 관련 ==========
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+
+# ========== Unity Collab ==========
+.collabignore
+.collab/
+**/.collabignore
+
+# ========== VSCode / Rider / Visual Studio ==========
+.vs/
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+
+# ========== OS 관련 ==========
+.DS_Store
+*.swp
+*.lock
+*.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# ========== 빌드 산출물 ==========
+*.apk
+*.aab
+*.xcodeproj
+*.xcworkspace
+*.ipa
+*.jar
+*.class
+*.exe
+*.dll
+
+# ========== 유니티 패키지 ==========
+*.unitypackage
+
+# ========== 기타 ==========
+*.log
+*.stackdump
+*.pdb
+*.mdb
+*.cache
+*.bak
+*.old
+*.orig
+*.tmp
+*.rej
+*.diff
+
+# Git LFS 추적 대상에서 제외
+*.psd
+*.fbx
+*.mp4
+*.mp3
+*.wav
+*.ogg
+*.mov
