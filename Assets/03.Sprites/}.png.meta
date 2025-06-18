@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c247712d0ebcc8449bac4b3f5174c1b6
+guid: bf615170b51410e4db424815831aca98
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 737408182178627887
-    second: wpahr dlTdma_0
+      213: 1188636327851218478
+    second: '}_0'
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wpahr dlTdma_0
+      name: '}_0'
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 7
+        y: 5
+        width: 57
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f214931b5dccb3a00800000000000000
-      internalID: 737408182178627887
+      spriteID: e2652b84172ee7010800000000000000
+      internalID: 1188636327851218478
       vertices: []
       indices: 
       edges: []

@@ -6,11 +6,11 @@ using System.Collections;
 public class IntroButton : MonoBehaviour
 {
     [SerializeField] private GameObject setting;
-    [SerializeField] private GameObject credit;
+    [SerializeField] private GameObject readMe;
     [SerializeField] private GameObject pingpong;
 
     bool isSettingOpen = false;
-    bool isCreditOpen = false;
+    bool isReadMeOpen = false;
 
     public void StartGame()
     {
@@ -34,7 +34,7 @@ public class IntroButton : MonoBehaviour
         }
         else
         {
-            if (!isCreditOpen)
+            if (!isReadMeOpen)
             {
                 setting.SetActive(true);
                 pingpong.SetActive(false);
@@ -44,19 +44,19 @@ public class IntroButton : MonoBehaviour
     }
     public void OpenCredit()
     {
-        if (isCreditOpen)
+        if (isReadMeOpen)
         {
-            credit.SetActive(false);
+            readMe.SetActive(false);
             pingpong.SetActive(true);
-            isCreditOpen = false;
+            isReadMeOpen = false;
         }
         else
         {
-            if (!isCreditOpen)
+            if (!isSettingOpen)
             {
-                credit.SetActive(true);
+                readMe.SetActive(true);
                 pingpong.SetActive(false);
-                isCreditOpen = true;
+                isReadMeOpen = true;
             }
         }
     }
