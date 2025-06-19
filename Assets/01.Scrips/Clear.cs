@@ -14,6 +14,16 @@ public class Clear : MonoBehaviour
 
     IEnumerator LoadNextScene()
     {
+        LevelClearer levelClearer = Object.FindFirstObjectByType<LevelClearer>();
+        if (levelClearer != null)
+        {
+            levelClearer.SaveClear();
+        }
+        else
+        {
+            Debug.LogError("LevelClearer not found in the scene.");
+        }
+
         Time.timeScale = 0;
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;

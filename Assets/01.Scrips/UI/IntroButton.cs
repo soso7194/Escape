@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.InputSystem;
 
 public class IntroButton : MonoBehaviour
 {
@@ -9,12 +10,25 @@ public class IntroButton : MonoBehaviour
     [SerializeField] private GameObject readMe;
     [SerializeField] private GameObject pingpong;
 
-    bool isSettingOpen = false;
-    bool isReadMeOpen = false;
+    public static bool isSettingOpen = false;
+    public static bool isReadMeOpen = false;
+
+    private void Update()
+    {
+        if (Keyboard.current.ctrlKey.wasPressedThisFrame && Keyboard.current.shiftKey.wasPressedThisFrame && Keyboard.current.rKey.wasPressedThisFrame)
+        {
+            for (int i = 0; i < 11; i++)
+                PlayerPrefs.DeleteKey("LevelCleared_" + i);
+            PlayerPrefs.DeleteKey("Initialized");
+            PlayerPrefs.Save();
+        }
+    }
 
     public void StartGame()
     {
-        SceneManager.LoadScene("02.0-1");
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+        SceneManager.LoadScene(nextSceneIndex);
     }
 
     public void QuitGame()
@@ -42,12 +56,11 @@ public class IntroButton : MonoBehaviour
             }
         }
     }
-    public void OpenCredit()
+    public void OpenReadMe()
     {
         if (isReadMeOpen)
         {
             readMe.SetActive(false);
-            pingpong.SetActive(true);
             isReadMeOpen = false;
         }
         else
@@ -55,7 +68,6 @@ public class IntroButton : MonoBehaviour
             if (!isSettingOpen)
             {
                 readMe.SetActive(true);
-                pingpong.SetActive(false);
                 isReadMeOpen = true;
             }
         }
