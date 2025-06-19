@@ -8,4 +8,9 @@ public class LevelLoader : MonoBehaviour
         string sceneName = "Level" + (index + 1);
         SceneManager.LoadScene(sceneName);
     }
+
+    public void Back()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
 }

@@ -15,8 +15,9 @@ public class IntroButton : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.ctrlKey.wasPressedThisFrame && Keyboard.current.shiftKey.wasPressedThisFrame && Keyboard.current.rKey.wasPressedThisFrame)
+        if (Keyboard.current.ctrlKey.isPressed && Keyboard.current.shiftKey.isPressed && Keyboard.current.rKey.isPressed)
         {
+            Debug.Log("Resetting PlayerPrefs...");
             for (int i = 0; i < 11; i++)
                 PlayerPrefs.DeleteKey("LevelCleared_" + i);
             PlayerPrefs.DeleteKey("Initialized");
