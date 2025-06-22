@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 public class OpenSetting : MonoBehaviour
 {
     [SerializeField] GameObject settingsMenu;
+
+    private void Start()
+    {
+        settingsMenu.SetActive(true);
+        settingsMenu.SetActive(false);
+    }
     private void Update()
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
