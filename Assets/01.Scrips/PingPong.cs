@@ -13,7 +13,7 @@ public class PingPong : MonoBehaviour
         moveDirection.Normalize();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         rb.linearVelocity = moveDirection * speed;
     }
