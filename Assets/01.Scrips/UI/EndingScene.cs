@@ -105,6 +105,7 @@ public class EndingScene : MonoBehaviour
         fadeImage.color = c;
         if ( pages == objects.Length - 1)
         {
+            Time.timeScale = 1f;
             SceneManager.LoadScene("00.Tilte");
         }
     }

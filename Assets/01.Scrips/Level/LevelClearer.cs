@@ -9,6 +9,13 @@ public class LevelClearer : MonoBehaviour
     void Start()
     {
         currentLevelIndex = GetLevelIndexFromSceneName();
+        void Start()
+        {
+            Debug.Log("LevelCleared_0: " + PlayerPrefs.GetInt("LevelCleared_0", 0));
+            Debug.Log("LevelCleared_1: " + PlayerPrefs.GetInt("LevelCleared_1", 0));
+            Debug.Log("Initialized: " + PlayerPrefs.GetInt("Initialized", 0));
+        }
+
     }
 
     public void SaveClear()

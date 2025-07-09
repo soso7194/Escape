@@ -35,6 +35,7 @@ public class OpenSetting : MonoBehaviour
     }
     public void HomeButton()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("00.Tilte");
     }
 }

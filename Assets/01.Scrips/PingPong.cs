@@ -10,11 +10,15 @@ public class PingPong : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        moveDirection.Normalize();
+        moveDirection = new Vector2(1, 1).normalized;
     }
 
     void Update()
     {
+        if (moveDirection == Vector2.zero)
+        {
+            moveDirection = new Vector2(1, 1).normalized;
+        }
         rb.linearVelocity = moveDirection * speed;
     }
 
